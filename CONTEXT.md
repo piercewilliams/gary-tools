@@ -40,11 +40,20 @@ For session history: see [sessions/](sessions/)
 7. [ ] Author voice Phase 2 (loop on high-performing articles) — Gary's roadmap, not yet live
 8. [ ] Planned endpoints (SERP analysis, content brief, forum mining) — not yet built
 
-## Session: 2026-03-27 — Kickoff Discussion
+## Session: 2026-03-27 — Context infrastructure setup
 
-Participants: Pierce, Chris, Jim, Susannah, Gary (implied).
-Key outcomes: Gary's toolset chosen over internal options. Chris wants "almost all, maybe all" modules. Integration point = post-CSA (CSA generates → Gary's API audits before editor review). Deterministic/probabilistic framing from Chris: facts+links must be verifiable by a human reviewer; keyword scoring can be probabilistic. Jim raised novelty concern (just aggregating?) — Gary's answer: deep claim checks + info foraging + structured formatting add value beyond page-one consensus. Susannah scoping timeline pending doc review.
+Set up the three-tier context architecture for this repo from scratch. Seeded all three tiers from the Mar 27 kickoff meeting notes and Gary's API documentation shared across two prior conversations.
+
+What was built:
+- `CONTEXT.md` — working memory
+- `REFERENCE.md` — stable facts (team, architecture, high-value modules, author voice roadmap)
+- `sessions/2026-03.md` — session archive
+- `docs/api-reference.md` — full Gary API endpoint reference (moved out of REFERENCE.md to keep it lean)
+- `docs/meeting-notes.md` — full Mar 27 meeting notes
+- `tests/` — placeholder for future test scripts
+
+Team roster fully resolved from transcript: Pierce Williams, Chris Palo, Susannah Locke, Gary Kirwan (gary@kirwandigital.com), Stephanie Zandecki, Jim Robinson. Key addition: Jim Robinson has his own internal SEO tool; Susannah has those materials alongside Gary's docs.
 
 ---
 
-*Tiered Context Architecture. Budget: ≤150 lines. Current: ~55 lines.*
+*Tiered Context Architecture. Budget: ≤150 lines. Current: ~60 lines.*
