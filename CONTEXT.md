@@ -1,8 +1,8 @@
 # Gary Tools — Working Context
 
 **Phase:** Evaluation & Integration Scoping
-**Status:** Active — awaiting Chris follow-up and Gary's API key/docs drop
-**Last session:** 2026-03-27
+**Status:** Active — group committed to formal evaluation (2026-03-31); awaiting Gary's API key/docs drop
+**Last session:** 2026-03-31 (group evaluation commitment made)
 
 For stable reference facts: see [REFERENCE.md](REFERENCE.md)
 For session history: see [sessions/](sessions/)
@@ -27,9 +27,16 @@ For session history: see [sessions/](sessions/)
 ## What's Next — Prioritized
 
 **High:**
-1. [ ] Follow-up conversation with Chris — determine which modules to prioritize
+1. [x] ~~Follow-up with Chris~~ — Group committed 2026-03-31 to formal evaluation; return with definitive yes/no on integration. Author portion flagged as most useful (underlying code is MIT open source). Political considerations noted.
 2. [ ] Gary drops API endpoint docs and McClatchy API key (confirm receipt)
 3. [ ] Resolve open questions above before scoping begins
+4. [ ] Evaluate each Gary module and return to group with recommendation
+
+## Session: 2026-03-31 — Group evaluation commitment
+
+CSA Weekly Update: Chris Palo formally called for evaluation of Gary's tools. Group (Chris, Sara Vallone, Susannah, Pierce) committed to assess each module and return with definitive yes/no on integration. Author portion flagged as most useful; underlying code is MIT open source. Susannah has had one prior meeting with Gary. Evaluate once API key lands.
+
+
 
 **Medium:**
 4. [ ] Run recommended first-test sequence once API key confirmed (health → scrape → meta → structure → brand-readiness → citations → poll)
