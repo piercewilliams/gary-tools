@@ -1,8 +1,8 @@
 # Gary Tools — Working Context
 
 **Phase:** Active Evaluation — integration direction confirmed
-**Status:** Active — Chris Palo blessed integration (2026-04-01); operational requirements defined; API key pending
-**Last session:** 2026-04-01 (Gary reports shared; Chris operational requirements; Pierce tested on Home Buyers Guide)
+**Status:** Blocked — Chris Palo blessed integration (2026-04-01); operational requirements defined; API key + endpoint docs still pending from Gary Kirwan
+**Last session:** 2026-04-01 (Gary reports shared; Chris responded with operational requirements)
 
 For stable reference facts: see [REFERENCE.md](REFERENCE.md)
 For session history: see [sessions/](sessions/)
@@ -14,8 +14,8 @@ For session history: see [sessions/](sessions/)
 - McClatchy already has a Gary API key; no integration built yet
 - Gary shared two claims validation reports (US Weekly legal story; Women's World health article)
 - Chris Palo responded: "Love to see how we can integrate this" — formal integration direction confirmed
-- Pierce tested Gary's validator on a Home Buyers Guide (Mecklenburg County fiscal year / tax article) with complex real-world nuances that a local editor had flagged
 - **Primary use case confirmed:** factual accuracy / claims validation post-CSA, before editor's desk — NOT primarily an SEO play
+- Stress-test candidate identified: Home Buyers Guide (Mecklenburg County fiscal year / tax article) — complex local nuances an editor previously flagged; **not yet run**
 - Susannah Locke remains integration lead
 
 ## Chris Palo's Operational Requirements (2026-04-01)
@@ -56,13 +56,13 @@ From email response to Gary's reports:
 10. [ ] Author voice Phase 2 (loop on high-performing articles) — Gary's roadmap, not yet live
 11. [ ] Planned endpoints (SERP analysis, content brief, forum mining) — not yet built
 
-## Session: 2026-04-01 — Chris requirements + Pierce testing
+## Session: 2026-04-01 — Chris requirements
 
 Gary sent two validation reports via email:
 - US Weekly legal article — claims validator flagged issues and suggested rewording
 - Women's World health article — scientific source checking demonstrated
 
-Chris replied with enthusiasm + operational requirements (see above). Pierce sent Gary a Home Buyers Guide test article (Mecklenburg County tax/fiscal year content with nuanced local issues flagged by an editor) to stress-test the validator.
+Chris replied with enthusiasm + operational requirements (see above). Home Buyers Guide (Mecklenburg County tax/fiscal year nuances) identified as a good stress-test candidate — not yet run; waiting on API key delivery first.
 
 ## Session: 2026-03-31 — Group evaluation commitment
 
