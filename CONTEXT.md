@@ -47,7 +47,7 @@ For session history: see [sessions/](sessions/)
 
 **High:**
 1. [ ] Await Gary's responses to the four questions (confidence, severity, article-level output, reproducibility)
-2. [ ] Schedule + run Sara Vallone session to define parameters
+2. [ ] Sara Vallone session — approach aligned 2026-04-03: walk reports together, Sara flags what she'd escalate vs. not, Pierce drafts ruleset for iteration. **Gated on Gary's answers.**
 3. [ ] Confirm API key status — is McClatchy's key active or is Gary running on his end?
 
 **Medium:**
