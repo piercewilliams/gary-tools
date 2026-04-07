@@ -1,8 +1,8 @@
 # Gary Tools — Working Context
 
-**Phase:** Active Evaluation — parameter definition in progress
-**Status:** Email sent to chain (2026-04-03); awaiting Gary's responses; Pierce + Sara Vallone to define editorial parameters for Chris
-**Last session:** 2026-04-03 (full materials review; inserted into email chain; action items defined)
+**Phase:** Active Evaluation — escalated; Chris Palo personally following up
+**Status:** Gary still unresponsive to Sara Vallone's test requests (as of 2026-04-06 C&P Weekly). Chris Palo now personally following up; suspects Gary may be deliberately withholding access (prefers team use API → potential future charges on Gary's side). Sara to CC Chris on all further correspondence.
+**Last session:** 2026-04-06 (C&P Weekly: Gary unresponsive to Sara's tests; Chris personally following up; escalation escalated)
 
 For stable reference facts: see [REFERENCE.md](REFERENCE.md)
 For session history: see [sessions/](sessions/)
@@ -16,6 +16,7 @@ For session history: see [sessions/](sessions/)
 - Chris has formally directed Pierce + Sara Vallone to define editorial parameters; Chris reviews once complete
 - Four open questions sent to Gary in email chain (2026-04-03); awaiting response
 - Home Buyers Guide stress-test complete — Charlotte report strongest of three; caught stale FY2025 tax rate the human editor missed
+- **Escalation (2026-04-06 C&P Weekly):** Sara Vallone confirmed Gary still unresponsive to her test requests. Chris Palo suspects Gary is hesitant to share tool access — prefers the team go through the API, likely because API usage would generate charges to Gary. Chris committed to personally following up with Gary. Sara to CC Chris on all further correspondence with Gary. Jim Robinson (Engineering) has also flagged a "novelty concern" about Gary's tool — relevance to integration TBD.
 
 ## Chris's Directives
 
@@ -46,9 +47,10 @@ For session history: see [sessions/](sessions/)
 ## What's Next — Prioritized
 
 **High:**
-1. [ ] Await Gary's responses to the four questions (confidence, severity, article-level output, reproducibility)
-2. [ ] Sara Vallone session — approach aligned 2026-04-03: walk reports together, Sara flags what she'd escalate vs. not, Pierce drafts ruleset for iteration. **Gated on Gary's answers.**
-3. [ ] Confirm API key status — is McClatchy's key active or is Gary running on his end?
+1. [ ] Await Gary's responses to the four questions (confidence, severity, article-level output, reproducibility) — **Chris Palo now personally following up (2026-04-06)**
+2. [ ] Sara Vallone session — approach aligned 2026-04-03: walk reports together, Sara flags what she'd escalate vs. not, Pierce drafts ruleset for iteration. Gated on Gary's answers + Chris's follow-up.
+3. [ ] Draft Gary Tools escalation ruleset before Sara Vallone meeting — start from Sara's 2-tier taxonomy (Needs Clarification / Needs Correction); layer in source authority tiers + escalation logic. 15 test articles from Sara.
+4. [ ] Confirm API key status — is McClatchy's key active or is Gary running on his end?
 
 **Medium:**
 4. [ ] Draft parameters document for Chris review once Sara session complete
