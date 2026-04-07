@@ -1,8 +1,8 @@
 # Gary Tools — Working Context
 
-**Phase:** Active Evaluation — disposition issue, not unresponsiveness
-**Status:** Gary has the API endpoint + McClatchy API key ready but will not share location — he prefers to run documents through the tool himself. This is a deliberate choice to maintain control, not a responsiveness issue. Chris Palo told Jason (Smith) about Gary's reluctance (2026-04-07). Sara Vallone following up directly via email (2026-04-08) asking Gary to send endpoint info.
-**Last session:** 2026-04-07 (Pierce<>Chris 1:30pm EDT — Gary disposition confirmed; Chris told Jason; Sara following up)
+**Phase:** Active Evaluation — API docs received, first-test sequence ready
+**Status:** Gary sent full API documentation (2026-04-08) — base URL, McClatchy API key, all live endpoints, and recommended first-test sequence. P10 is now unblocked. Key is rotatable per Gary. Sara Vallone parameter session next week still on track.
+**Last session:** 2026-04-08 (Gary sent "Unified AI SEO App — Content Audit API (One-Page Report)" PDF to Chris; McClatchy API key embedded; all endpoints documented)
 
 For stable reference facts: see [REFERENCE.md](REFERENCE.md)
 For session history: see [sessions/](sessions/)
@@ -11,14 +11,51 @@ For session history: see [sessions/](sessions/)
 
 ## Current State
 
-- Gary is actively running reports (Duggar legal, Women's World health, Charlotte tax/home values) — API appears live
-- **Gary confirmed (2026-04-07):** Has API endpoint + McClatchy API key ready. But will not share location — prefers to run documents through the tool himself. Pierce: "He just wants to run it all himself." Chris confirmed: "Yeah, and for whatever reason he just won't tell us where it is."
-- **Chris told Jason (Smith) about Gary's reluctance (2026-04-07):** Chris and Jason went back and forth; Jason now aware Gary is "avoiding" sharing the code.
-- Sara Vallone following up via email (2026-04-08): asked Gary directly to send the API endpoint info
+- **UNBLOCKED 2026-04-08:** Gary sent full API documentation ("Unified AI SEO App — Content Audit API (One-Page Report)") to Chris. P10 is now unblocked.
+- **Base URL:** `https://unified-seo-gateway.kirwan-digital-marketing-ltd.workers.dev`
+- **Auth:** `Authorization: Bearer uak_AWuPNYNP7j2BYi8ZDiAACwPaueknsRHM` — Gary says this key is rotatable ("I can easily rotate the key so this one in the code can be killed for security")
+- **Gary's intended workflow:** "Copy this page into your Claude and then run a markdown article through it" — designed to be used via Claude Code, exactly how Pierce works
+- Gary is actively running reports (Duggar legal, Women's World health, Charlotte tax/home values) — API confirmed live
 - Chris has formally directed Pierce + Sara Vallone to define editorial parameters; Chris reviews once complete
 - Four open questions sent to Gary in email chain (2026-04-03); still unanswered
 - Home Buyers Guide stress-test complete — Charlotte report strongest of three; caught stale FY2025 tax rate the human editor missed
 - CSA fact-checking ruleset v0.1 drafted and passed to Sara Vallone 2026-04-08 — awaiting her review before test article session next week
+
+## API Endpoints (All Live)
+
+| Endpoint | Type | Description |
+|----------|------|-------------|
+| `GET /health` | sync | Public, no auth — first connectivity test |
+| `POST /api/v1/scrape` | sync | URL → markdown |
+| `POST /api/v1/optimize/meta` | sync | SEO title + meta description |
+| `POST /api/v1/audit/content-structure` | sync | Headings, skimmability |
+| `POST /api/v1/audit/unanswered-questions` | sync | Topic gap discovery |
+| `POST /api/v1/research/data-validity` | sync or async | **Main fact-checking endpoint.** Requires `keyword`, `goal`, `report_markdown` or `report_path`; infers keyword from headline if not provided |
+| `POST /api/v1/audit/citations` | async | Checks linked citations |
+| `POST /api/v1/audit/brand-fit` | async | Brand voice comparison |
+| `POST /api/v1/polish/brand-fit` | async | Rewrites using brand-fit findings |
+| `POST /api/v1/audit/internal-links` | async | Suggests internal links |
+| `GET /api/v1/internal-links/library` | sync | Content library for linking |
+| `GET /api/v1/brands/:id/readiness` | sync | Check brand readiness |
+| `GET /api/v1/brands/resolve` | sync | Resolve publication slug |
+| `POST /api/v1/brands/upsert-guide` | sync | Upload brand guide |
+| `POST /api/v1/brands/sync-required` | sync | Trigger brand sync |
+| `GET /api/v1/jobs/:id` | sync | Poll async job result |
+
+**Async pattern:** POST returns 202 + `job_id` → poll `GET /api/v1/jobs/:id` until complete.
+**data-validity pattern:** POST with `wait_for_completion: false` → get `task_id` → poll `GET /api/v1/research/data-validity/:taskId`
+**brand_id:** `womans-world-shop` = confirmed working example. `mcclatchy` = referenced in brand-fit examples; readiness not yet confirmed.
+
+## First-Test Sequence
+
+1. `GET /health` — confirm connectivity (no auth needed)
+2. `POST /api/v1/scrape` — pull a live article URL → markdown
+3. `POST /api/v1/optimize/meta` — SEO title + meta description
+4. `POST /api/v1/audit/content-structure` — headings, skimmability
+5. `POST /api/v1/audit/unanswered-questions` — topic gaps
+6. `GET /api/v1/brands/mcclatchy/readiness` — confirm McClatchy brand is set up
+7. `POST /api/v1/audit/citations` (async) — check citations
+8. `GET /api/v1/jobs/:id` — poll for async results
 
 ## Chris's Directives
 
@@ -49,9 +86,9 @@ For session history: see [sessions/](sessions/)
 ## What's Next — Prioritized
 
 **High:**
-1. [ ] Monitor Sara Vallone follow-up (2026-04-08) — if Gary responds and shares endpoint info, activate testing. If no response, escalate back to Chris.
-2. [ ] Sara Vallone parameter session (next week) — walk 15 test articles; v0.1 ruleset already sent to Sara, awaiting her review. Do not wait for Gary's 4 open questions to be answered before running this session.
-3. [ ] Gary's 4 questions (confidence scoring, severity calibration, article-level output, reproducibility) — still unanswered; will need to resolve before building integration spec, but don't block Sara session.
+1. [ ] **Run first-test sequence** (see table above) — health → scrape → meta → content-structure → unanswered-questions → brands/mcclatchy/readiness → citations → poll. Use McClatchy key in hand.
+2. [ ] **Sara Vallone parameter session (next week)** — walk 15 test articles; v0.1 ruleset already sent to Sara 2026-04-08, awaiting her review. Do not wait for Gary's 4 open questions to be answered before running this session.
+3. [ ] Gary's 4 questions (confidence scoring, severity calibration, article-level output, reproducibility) — still unanswered; will need to resolve before building integration spec, but don't block Sara session or first-test sequence.
 
 **Medium:**
 4. [ ] Draft parameters document for Chris review once Sara session complete
