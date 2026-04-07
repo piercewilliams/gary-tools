@@ -1,8 +1,8 @@
 # Gary Tools — Working Context
 
-**Phase:** Active Evaluation — escalated; Chris Palo personally following up
-**Status:** Gary still unresponsive to Sara Vallone's test requests (as of 2026-04-06 C&P Weekly). Chris Palo now personally following up; suspects Gary may be deliberately withholding access (prefers team use API → potential future charges on Gary's side). Sara to CC Chris on all further correspondence.
-**Last session:** 2026-04-06 (C&P Weekly: Gary unresponsive to Sara's tests; Chris personally following up; escalation escalated)
+**Phase:** Active Evaluation — disposition issue, not unresponsiveness
+**Status:** Gary has the API endpoint + McClatchy API key ready but will not share location — he prefers to run documents through the tool himself. This is a deliberate choice to maintain control, not a responsiveness issue. Chris Palo told Jason (Smith) about Gary's reluctance (2026-04-07). Sara Vallone following up directly via email (2026-04-08) asking Gary to send endpoint info.
+**Last session:** 2026-04-07 (Pierce<>Chris 1:30pm EDT — Gary disposition confirmed; Chris told Jason; Sara following up)
 
 For stable reference facts: see [REFERENCE.md](REFERENCE.md)
 For session history: see [sessions/](sessions/)
@@ -12,11 +12,13 @@ For session history: see [sessions/](sessions/)
 ## Current State
 
 - Gary is actively running reports (Duggar legal, Women's World health, Charlotte tax/home values) — API appears live
-- McClatchy API key status unclear: Gary may be running on his end; confirm whether McClatchy's key is active
+- **Gary confirmed (2026-04-07):** Has API endpoint + McClatchy API key ready. But will not share location — prefers to run documents through the tool himself. Pierce: "He just wants to run it all himself." Chris confirmed: "Yeah, and for whatever reason he just won't tell us where it is."
+- **Chris told Jason (Smith) about Gary's reluctance (2026-04-07):** Chris and Jason went back and forth; Jason now aware Gary is "avoiding" sharing the code.
+- Sara Vallone following up via email (2026-04-08): asked Gary directly to send the API endpoint info
 - Chris has formally directed Pierce + Sara Vallone to define editorial parameters; Chris reviews once complete
-- Four open questions sent to Gary in email chain (2026-04-03); awaiting response
+- Four open questions sent to Gary in email chain (2026-04-03); still unanswered
 - Home Buyers Guide stress-test complete — Charlotte report strongest of three; caught stale FY2025 tax rate the human editor missed
-- **Escalation (2026-04-06 C&P Weekly):** Sara Vallone confirmed Gary still unresponsive to her test requests. Chris Palo suspects Gary is hesitant to share tool access — prefers the team go through the API, likely because API usage would generate charges to Gary. Chris committed to personally following up with Gary. Sara to CC Chris on all further correspondence with Gary. Jim Robinson (Engineering) has also flagged a "novelty concern" about Gary's tool — relevance to integration TBD.
+- CSA fact-checking ruleset v0.1 drafted and passed to Sara Vallone 2026-04-08 — awaiting her review before test article session next week
 
 ## Chris's Directives
 
@@ -47,10 +49,9 @@ For session history: see [sessions/](sessions/)
 ## What's Next — Prioritized
 
 **High:**
-1. [ ] Await Gary's responses to the four questions (confidence, severity, article-level output, reproducibility) — **Chris Palo now personally following up (2026-04-06)**
-2. [ ] Sara Vallone session — approach aligned 2026-04-03: walk reports together, Sara flags what she'd escalate vs. not, Pierce drafts ruleset for iteration. Gated on Gary's answers + Chris's follow-up.
-3. [ ] Draft Gary Tools escalation ruleset before Sara Vallone meeting — start from Sara's 2-tier taxonomy (Needs Clarification / Needs Correction); layer in source authority tiers + escalation logic. 15 test articles from Sara.
-4. [ ] Confirm API key status — is McClatchy's key active or is Gary running on his end?
+1. [ ] Monitor Sara Vallone follow-up (2026-04-08) — if Gary responds and shares endpoint info, activate testing. If no response, escalate back to Chris.
+2. [ ] Sara Vallone parameter session (next week) — walk 15 test articles; v0.1 ruleset already sent to Sara, awaiting her review. Do not wait for Gary's 4 open questions to be answered before running this session.
+3. [ ] Gary's 4 questions (confidence scoring, severity calibration, article-level output, reproducibility) — still unanswered; will need to resolve before building integration spec, but don't block Sara session.
 
 **Medium:**
 4. [ ] Draft parameters document for Chris review once Sara session complete
