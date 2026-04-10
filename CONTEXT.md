@@ -1,8 +1,8 @@
 # Gary Tools — Working Context
 
 **Phase:** Active Evaluation — API docs received, first-test sequence ready
-**Status:** Gary sent full API documentation (2026-04-08) — base URL, McClatchy API key, all live endpoints, and recommended first-test sequence. P10 is now unblocked. Key is rotatable per Gary. Sara Vallone parameter session next week still on track.
-**Last session:** 2026-04-08 (Gary sent "Unified AI SEO App — Content Audit API (One-Page Report)" PDF to Chris; McClatchy API key embedded; all endpoints documented)
+**Status:** Gary sent full API docs (2026-04-08). Unblocked. New framing from Chris (2026-04-10): Gary's tools are "nodes" — cross-pipeline tools that every pipeline in the CSA system touches. Need to request full roster of all Gary's tools, not just the fact-checking API.
+**Last session:** 2026-04-10 — Chris Palo PRD meeting: Gary tools reframed as cross-pipeline nodes; Pierce tasked with contacting Gary for full tool roster.
 
 For stable reference facts: see [REFERENCE.md](REFERENCE.md)
 For session history: see [sessions/](sessions/)
@@ -86,8 +86,9 @@ For session history: see [sessions/](sessions/)
 ## What's Next — Prioritized
 
 **High:**
-1. [ ] **Run first-test sequence** (see table above) — health → scrape → meta → content-structure → unanswered-questions → brands/mcclatchy/readiness → citations → poll. Use McClatchy key in hand.
-2. [ ] **Sara Vallone parameter session (next week)** — walk 15 test articles; v0.1 ruleset already sent to Sara 2026-04-08, awaiting her review. Do not wait for Gary's 4 open questions to be answered before running this session.
+1. [ ] **Contact Gary Kirwan for full roster of all tools he has built** — copy Chris Palo on the email. Gary likely has tools beyond the fact-checking/content audit API documented here. Chris wants to understand which tools function as "nodes" across all pipelines.
+2. [ ] **Run first-test sequence** (see table above) — health → scrape → meta → content-structure → unanswered-questions → brands/mcclatchy/readiness → citations → poll. Use McClatchy key in hand.
+3. [ ] **Sara Vallone parameter session (next week)** — walk 15 test articles; v0.1 ruleset already sent to Sara 2026-04-08, awaiting her review. Do not wait for Gary's 4 open questions to be answered before running this session.
 3. [ ] Gary's 4 questions (confidence scoring, severity calibration, article-level output, reproducibility) — still unanswered; will need to resolve before building integration spec, but don't block Sara session or first-test sequence.
 
 **Medium:**
