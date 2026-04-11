@@ -1,8 +1,8 @@
 # Gary Tools — Working Context
 
-**Phase:** Active Evaluation — API docs received, first-test sequence ready
-**Status:** Gary sent full API docs (2026-04-08). Unblocked. New framing from Chris (2026-04-10): Gary's tools are "nodes" — cross-pipeline tools that every pipeline in the CSA system touches. Need to request full roster of all Gary's tools, not just the fact-checking API.
-**Last session:** 2026-04-10 — Chris Palo PRD meeting: Gary tools reframed as cross-pipeline nodes; Pierce tasked with contacting Gary for full tool roster.
+**Phase:** Active Evaluation — tool roster email sent, awaiting Gary's response
+**Status:** Gary tools reframed as cross-pipeline nodes (2026-04-10). Full tool roster email sent to Gary (CC: Chris Palo) 2026-04-10 — asking for complete suite description, what each tool takes/returns, development status, and how Gary sees them relating as a suite. Awaiting response.
+**Last session:** 2026-04-10 — PRD V0.5 complete with Gary tools as nodes framing; tool roster email sent to Gary.
 
 For stable reference facts: see [REFERENCE.md](REFERENCE.md)
 For session history: see [sessions/](sessions/)
@@ -86,16 +86,16 @@ For session history: see [sessions/](sessions/)
 ## What's Next — Prioritized
 
 **High:**
-1. [ ] **Contact Gary Kirwan for full roster of all tools he has built** — copy Chris Palo on the email. Gary likely has tools beyond the fact-checking/content audit API documented here. Chris wants to understand which tools function as "nodes" across all pipelines.
+1. [x] ~~**Contact Gary Kirwan for full roster of all tools**~~ — DONE 2026-04-10. Email sent, CC Chris Palo. Awaiting Gary's response.
 2. [ ] **Run first-test sequence** (see table above) — health → scrape → meta → content-structure → unanswered-questions → brands/mcclatchy/readiness → citations → poll. Use McClatchy key in hand.
 3. [ ] **Sara Vallone parameter session (next week)** — walk 15 test articles; v0.1 ruleset already sent to Sara 2026-04-08, awaiting her review. Do not wait for Gary's 4 open questions to be answered before running this session.
-3. [ ] Gary's 4 questions (confidence scoring, severity calibration, article-level output, reproducibility) — still unanswered; will need to resolve before building integration spec, but don't block Sara session or first-test sequence.
+4. [ ] **Once Gary responds: map full tool roster to pipeline phases** — identify which tools function as nodes at which stage of which pipeline (T1–T5). Feeds integration spec.
+5. [ ] Gary's 4 questions (confidence scoring, severity calibration, article-level output, reproducibility) — still unanswered; will need to resolve before building integration spec, but don't block Sara session or first-test sequence.
 
 **Medium:**
-4. [ ] Draft parameters document for Chris review once Sara session complete
-5. [ ] Run first-test sequence with McClatchy key once confirmed: health → scrape → meta → structure → brand-readiness → citations → poll
-6. [ ] Define source trustworthiness management process (Pierce owns list per Chris)
-7. [ ] Add claims validation module to PRD scope (P9)
+6. [ ] Draft parameters document for Chris review once Sara session complete
+7. [ ] Define source trustworthiness management process (Pierce owns list per Chris)
+8. [ ] PRD V0.5 complete — claims validation framing as cross-pipeline node now in document; no further PRD action needed for P10
 
 **Deferred:**
 8. [ ] Resolve open questions (Convex indexing, brand_id scope, cost model, author voice endpoint) — still pending Gary's API docs
